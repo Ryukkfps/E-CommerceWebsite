@@ -9,6 +9,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { GoGitCompare } from "react-icons/go";
 import { FaRegHeart } from "react-icons/fa";
 import { Tooltip } from "@mui/material";
+import NavBar from "../NavBar/NavBar";
 
 const Header = () => {
   const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -20,7 +21,7 @@ const Header = () => {
     },
   }));
   return (
-    <header>
+    <header className="bg-white">
       <div className="top-strip py-2 border-b-[2px] border-gray-250">
         <div className="container">
           <div className="flex items-center justify-between ">
@@ -54,7 +55,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="header">
+      <div className="header py-3 border-b-[2px] border-gray-250">
         <div className="container flex items-center justify-between">
           <div className="col1 w-[25%] py-5">
             <Link to={"/"}>
@@ -113,6 +114,9 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      <NavBar/>
+
     </header>
   );
 };
